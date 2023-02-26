@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+  background-color: white;
+  }
+  * {
+  box-sizing: border-box;
+  }
+  a{
+  font-family: 'Space Mono', monospace;
+  }
+  h2{
+  font-family: 'Space Mono', monospace;
+  }
+  h1{
+  font-family: 'Space Mono', monospace;
+  }
+  h3{
+  font-family: 'Space Mono', monospace;
+  }
+  p{
+  font-family: 'Space Mono', monospace;
+  }
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('home')}}">COOK SMART</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{url_for('home')}}">Home</a></li>
+      <li><a href="{{url_for('food')}}">Food</a></li>
+      <li><a href="{{url_for('profiles')}}">Profiles</a></li>
+      <li class="active"><a href="{{url_for('data')}}">Data</a></li>
+      <li><a href="{{url_for('about')}}">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Data</h1>
+  <h3>Studies are consistent with providing evidence that poor eating habits adversely impact academic performance, while healthy dietary behaviors are <b style='color:#DD9983 !important;'>favorable predictors of academic success </b>(Forster & Brister, 2021).</h3>
+  <br>
+  <center><img src="static/graph.png" alt="Graph" width="600" height="350"></center>
+  <center><h6> Frequency of eating breakfast and self-reported grade point average (GPA). Mean GPA for all participants (3.37) indicated by orange line. Trendline
+in red. </h6></center>
+</div>
+<br>
+<center><div class= "container">
+<div class="row">
+  <h2>We used <b style='color:#DD9983 !important;'>NLP techniques </b>to generate a <b style='color:#DD9983 !important;'>word cloud </b>of common words college students use to describe their <b style='color:#DD9983 !important;'>current vs. ideal diet</b>.</h2>
+  <div class="column">
+    <h3>Current Diet</h3>
+    <br>
+    <img src="static/current.png" alt="Current Diet" width="450" height="450">
+      <br><br>  <br><br>
+  </div>
+  <div class="column">
+    <h3>Ideal Diet</h3>
+    <br>
+    <img src="static/ideal.png" alt="Ideal Diet" width="450" height="450">
+      <br><br>  <br><br>
+  </div>
+</div>
+</div>
+  </center>
+</body>
+</html>

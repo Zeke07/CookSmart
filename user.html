@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}{% endblock %}</title>  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+  background-color: #F88B86;
+  }
+  a{
+  font-family: 'Space Mono', monospace;
+  }
+  h1{
+  font-family: 'Space Mono', monospace;
+  }
+  h2{
+  font-family: 'Space Mono', monospace;
+  }
+  h3{
+  font-family: 'Space Mono', monospace;
+  }
+  p{
+  font-family: 'Space Mono', monospace;
+  }
+  #box {
+        padding-left: 20px;
+        width: 1100px;
+        height: 243px;
+        border: 5px solid black;
+        text-align: left;
+        font-family: 'Space Mono', monospace;
+    }
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('home')}}"> COOK SMART</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{url_for('home')}}">Home</a></li>
+      <li><a href="{{url_for('food')}}">Food</a><br>
+      <li class="active"><a href="{{url_for('profiles')}}">Profile</a><br>
+      <li><a href="{{url_for('data')}}">Data</a><br>
+      <li><a href="{{url_for('about')}}">About</a><br>
+    </ul>
+  </div>
+</nav>
+      <!-- HARD CODED FOR DEMO PURPOSES -->
+<div class = "container">
+  <h3>You are logged in!</h3><br>
+    <h1>Welcome back, "Bucky"</h1>
+</div>
+
+<div></div>
+
+
+<div class = "container">
+<h3>Your Preferences: </h3>
+<label for="myCheck" style="font-family: 'Space Mono', monospace; font-size: 15px;">Gluten Free:</label>
+  <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+  <label for="myCheck2" style="font-family: 'Space Mono', monospace; font-size: 15px;">Ketogenic:</label>
+  <input type="checkbox" id="myCheck2" onclick="myFunction()">
+
+  <label for="myCheck3" style="font-family: 'Space Mono', monospace; font-size: 15px;">Vegetarian:</label>
+  <input type="checkbox" id="myCheck3" onclick="myFunction()" checked>
+
+<label for="myCheck4" style="font-family: 'Space Mono', monospace; font-size: 15px;">Vegan:</label>
+  <input type="checkbox" id="myCheck4" onclick="myFunction()">
+
+<label for="myCheck5" style="font-family: 'Space Mono', monospace; font-size: 15px;">Pescetarian:</label>
+  <input type="checkbox" id="myCheck5" onclick="myFunction()">
+
+<label for="myCheck6" style="font-family: 'Space Mono', monospace; font-size: 15px;">Paleo:</label>
+  <input type="checkbox" id="myCheck6" onclick="myFunction()">
+  <p id="text" style="display:none">Preferences Updated!</p>
+
+</div>
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<br>
+<div class = "container">
+    <h2>My Recipes:</h2>
+    <br>
+      <div id="box"><h3>Caesar Salad</h3> <u>Prep Time</u>: 20 minutes <u>Cook Time</u>: 10 minutes <u>Total Time</u>: 30 minute
+        <br>
+        <br>
+      <ol>
+        <li>In a small bowl, whisk together garlic, dijon, Worcestershire, lemon juice and red wine vinegar.</li>
+        <li>Whisk in 1/2 tsp salt and 1/8 tsp black pepper, or season to taste.</li>
+        <li>Rinse, dry and chop or tear the romaine into bite-sized pieces. Place in a large serving bowl and sprinkle generously with shredded parmesan cheese and cooled croutons. Drizzle with dressing and toss gently until lettuce is evenly coated.</li>
+      </ol>
+        <p>Calories: 289kcal | Carbs: 9g | Protein: 4g | Fat: 26g | Cholesterol: 9mg | Sodium: 596mg | Fiber: 3.4g | Sugar: 4.4g</p>
+      </div>
+  <br><br>
+  <div id="box"><h3>Mixed Berry Smoothie</h3> <u>Prep Time</u>: 5 minutes <u>Cook Time</u>: 1 minutes <u>Total Time</u>: 6 minute
+        <br>
+        <br>
+      <ol>
+        <li>Place the apple juice, banana, berries and yogurt in a blender; blend until smooth. If the smoothie seems too thick, add a little more liquid (1/4 cup). </li>
+        <li>Taste and add honey if desired. Pour into two glasses and garnish with fresh berries and mint sprigs if desired.</li>
+      </ol>
+      <p>Calories: 221kcal | Carbs: 52g | Protein: 6g | Fat: 1g | Cholesterol: 2mg | Sodium: 60mg | Fiber: 4g | Sugar: 41g</p>
+      </div>
+  <br>
+  <br>
+
+
+</div>
+
+</body>
+</html>

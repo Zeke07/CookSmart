@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+  body {
+  background-color: white;
+  }
+  a{
+  font-family: 'Space Mono', monospace;
+  }
+  h1{
+  font-family: 'Space Mono', monospace;
+  }
+  p{
+  font-family: 'Space Mono', monospace;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('home')}}">COOK SMART</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{url_for('home')}}">Home</a></li>
+      <li><a href="{{url_for('food')}}">Food</a><br>
+      <li><a href="{{url_for('profiles')}}">Profile</a><br>
+      <li><a href="{{url_for('data')}}">Data</a><br>
+      <li class="active"><a href="{{url_for('about')}}">About</a><br>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <center><h1>About the Team</h1></center>
+  <center><img src="static/team.png" alt="Team" width="450" height="350"></center>
+  <br>
+  <center><p>Team Members (from left to right): Mridini Thippisetty, John Lemma, Divya Durgavarjhula, Zayn Khan</p></center>
+</div>
+
+</body>
+</html>
